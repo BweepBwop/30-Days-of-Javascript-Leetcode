@@ -1,8 +1,14 @@
-const createHelloWorld = () => () => "Hello World";
+/**
+ * @return {Function}
+ */
+function createHelloWorld() {
+        return function() 
+        { 
+            return "Hello World"
+        
+        };
+    }
+
 const f = createHelloWorld();
-console.log(f()); 
-
-
-/* I cut off any unnecessary function declarations in order to shorten the code and utilized the arrow functions
-   this part ==> console.log(f()); is actually O(1) so its constant time 
-*/
+console.log(f());
+console.log(f({}, null, 42));
